@@ -1,0 +1,182 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>CS561playground</groupId>
+  <artifactId>CS561playground</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+  <dependency>
+    	<groupId>edu.stanford.nlp</groupId>
+    	<artifactId>stanford-corenlp</artifactId>
+    	<version>3.9.1</version>
+	</dependency>
+	<dependency>
+    	<groupId>edu.stanford.nlp</groupId>
+    	<artifactId>stanford-corenlp</artifactId>
+    	<version>3.9.1</version>
+    	<classifier>models</classifier>
+	</dependency>
+	 <dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-api</artifactId>
+       <version>1.7.5</version>
+   </dependency>
+   <dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-log4j12</artifactId>
+       <version>1.7.5</version>
+   </dependency>
+	
+	
+	<dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.10.3</version>
+ </dependency>
+ 
+ <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-core -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>5.5.0</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-analyzers-common -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-common</artifactId>
+            <version>5.5.0</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-queryparser -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-queryparser</artifactId>
+            <version>5.5.0</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-analyzers-smartcn -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-smartcn</artifactId>
+            <version>5.5.0</version>
+        </dependency>
+        <!-- JUnits -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <!-- BlazeGraph -->
+        <dependency>
+            <groupId>com.blazegraph</groupId>
+            <artifactId>bigdata-core</artifactId>
+            <version>2.1.4</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- end -->
+        
+        <!-- Apache Jena -->
+        <!-- https://mvnrepository.com/artifact/org.apache.jena/jena-arq -->
+        <dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>jena-arq</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.6</version>
+        </dependency>
+        <!-- end -->
+        
+        <!-- deeplearning4j -->
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-nlp</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-native-platform</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+        <!-- end -->
+        
+        <!-- WordNet -->
+        <dependency>
+            <groupId>edu.mit</groupId>
+            <artifactId>jwi</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+        
+        <!-- main library dependency -->
+        <dependency>
+            <groupId>net.sf.extjwnl</groupId>
+            <artifactId>extjwnl</artifactId>
+            <version>1.9.4</version>
+        </dependency>
+        
+        <!-- Princeton WordNet 3.1 data dependency -->
+        <dependency>
+            <groupId>net.sf.extjwnl</groupId>
+            <artifactId>extjwnl-data-wn31</artifactId>
+            <version>1.2</version>
+        </dependency>
+        
+        <!-- Word Mover Distance dependencies -->
+        <!-- 
+        <dependency>
+            <groupId>wmd4j</groupId>
+            <artifactId>wmd4j</artifactId>
+            <version>1.0</version>
+            <type>jar</type>
+        </dependency>
+        -->
+        
+        <!-- jFreeChart -->
+        <!-- https://mvnrepository.com/artifact/jfree/jfreechart -->
+        <dependency>
+            <groupId>jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>1.0.13</version>
+        </dependency>
+	
+	
+	<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.7</version>
+	</dependency>
+     
+</dependencies>
+  
+</project>

@@ -1,0 +1,275 @@
+@prefix : <http://www.ics.forth.gr/example#> .
+@prefix ex: <http://www.ics.forth.gr/example> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tmp: <http://www.semanticweb.org/maria/ontologies/2021/9/running_example#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix example: <http://www.ics.forth.gr/example#> .
+@base <http://www.ics.forth.gr/example> .
+
+<http://www.ics.forth.gr/example> rdf:type owl:Ontology .
+
+
+example:topClass  rdf:type owl:Class .
+
+example:class0 rdf:type owl:Class; rdfs:subClassOf example:topClass .
+example:individual00 rdf:type owl:NamedIndividual, example:class0  .
+example:individual01 rdf:type owl:NamedIndividual, example:class0  .
+example:individual02 rdf:type owl:NamedIndividual, example:class0  .
+example:individual03 rdf:type owl:NamedIndividual, example:class0  .
+example:individual04 rdf:type owl:NamedIndividual, example:class0  .
+example:individual05 rdf:type owl:NamedIndividual, example:class0  .
+example:individual06 rdf:type owl:NamedIndividual, example:class0  .
+example:individual07 rdf:type owl:NamedIndividual, example:class0  .
+example:individual08 rdf:type owl:NamedIndividual, example:class0  .
+example:individual09 rdf:type owl:NamedIndividual, example:class0  .
+
+example:class1 rdf:type owl:Class; rdfs:subClassOf example:topClass .
+example:individual10 rdf:type owl:NamedIndividual, example:class1  .
+example:individual11 rdf:type owl:NamedIndividual, example:class1  .
+example:individual12 rdf:type owl:NamedIndividual, example:class1  .
+example:individual13 rdf:type owl:NamedIndividual, example:class1  .
+example:individual14 rdf:type owl:NamedIndividual, example:class1  .
+example:individual15 rdf:type owl:NamedIndividual, example:class1  .
+example:individual16 rdf:type owl:NamedIndividual, example:class1  .
+example:individual17 rdf:type owl:NamedIndividual, example:class1  .
+example:individual18 rdf:type owl:NamedIndividual, example:class1  .
+example:individual19 rdf:type owl:NamedIndividual, example:class1  .
+
+example:class2 rdf:type owl:Class; rdfs:subClassOf example:topClass .
+example:individual20 rdf:type owl:NamedIndividual, example:class2  .
+example:individual21 rdf:type owl:NamedIndividual, example:class2  .
+example:individual22 rdf:type owl:NamedIndividual, example:class2  .
+example:individual23 rdf:type owl:NamedIndividual, example:class2  .
+example:individual24 rdf:type owl:NamedIndividual, example:class2  .
+example:individual25 rdf:type owl:NamedIndividual, example:class2  .
+example:individual26 rdf:type owl:NamedIndividual, example:class2  .
+example:individual27 rdf:type owl:NamedIndividual, example:class2  .
+example:individual28 rdf:type owl:NamedIndividual, example:class2  .
+example:individual29 rdf:type owl:NamedIndividual, example:class2  .
+
+example:class3 rdf:type owl:Class; rdfs:subClassOf example:topClass .
+example:individual30 rdf:type owl:NamedIndividual, example:class3  .
+example:individual31 rdf:type owl:NamedIndividual, example:class3  .
+example:individual32 rdf:type owl:NamedIndividual, example:class3  .
+example:individual33 rdf:type owl:NamedIndividual, example:class3  .
+example:individual34 rdf:type owl:NamedIndividual, example:class3  .
+example:individual35 rdf:type owl:NamedIndividual, example:class3  .
+example:individual36 rdf:type owl:NamedIndividual, example:class3  .
+example:individual37 rdf:type owl:NamedIndividual, example:class3  .
+example:individual38 rdf:type owl:NamedIndividual, example:class3  .
+example:individual39 rdf:type owl:NamedIndividual, example:class3  .
+
+example:class4 rdf:type owl:Class; rdfs:subClassOf example:topClass .
+example:individual40 rdf:type owl:NamedIndividual, example:class4  .
+example:individual41 rdf:type owl:NamedIndividual, example:class4  .
+example:individual42 rdf:type owl:NamedIndividual, example:class4  .
+example:individual43 rdf:type owl:NamedIndividual, example:class4  .
+example:individual44 rdf:type owl:NamedIndividual, example:class4  .
+example:individual45 rdf:type owl:NamedIndividual, example:class4  .
+example:individual46 rdf:type owl:NamedIndividual, example:class4  .
+example:individual47 rdf:type owl:NamedIndividual, example:class4  .
+example:individual48 rdf:type owl:NamedIndividual, example:class4  .
+example:individual49 rdf:type owl:NamedIndividual, example:class4  .
+
+example:class5 rdf:type owl:Class; rdfs:subClassOf example:topClass .
+example:individual50 rdf:type owl:NamedIndividual, example:class5  .
+example:individual51 rdf:type owl:NamedIndividual, example:class5  .
+example:individual52 rdf:type owl:NamedIndividual, example:class5  .
+example:individual53 rdf:type owl:NamedIndividual, example:class5  .
+example:individual54 rdf:type owl:NamedIndividual, example:class5  .
+example:individual55 rdf:type owl:NamedIndividual, example:class5  .
+example:individual56 rdf:type owl:NamedIndividual, example:class5  .
+example:individual57 rdf:type owl:NamedIndividual, example:class5  .
+example:individual58 rdf:type owl:NamedIndividual, example:class5  .
+example:individual59 rdf:type owl:NamedIndividual, example:class5  .
+
+example:class6 rdf:type owl:Class; rdfs:subClassOf example:topClass .
+example:individual60 rdf:type owl:NamedIndividual, example:class6  .
+example:individual61 rdf:type owl:NamedIndividual, example:class6  .
+example:individual62 rdf:type owl:NamedIndividual, example:class6  .
+example:individual63 rdf:type owl:NamedIndividual, example:class6  .
+example:individual64 rdf:type owl:NamedIndividual, example:class6  .
+example:individual65 rdf:type owl:NamedIndividual, example:class6  .
+example:individual66 rdf:type owl:NamedIndividual, example:class6  .
+example:individual67 rdf:type owl:NamedIndividual, example:class6  .
+example:individual68 rdf:type owl:NamedIndividual, example:class6  .
+example:individual69 rdf:type owl:NamedIndividual, example:class6  .
+
+example:class7 rdf:type owl:Class; rdfs:subClassOf example:topClass .
+example:individual70 rdf:type owl:NamedIndividual, example:class7  .
+example:individual71 rdf:type owl:NamedIndividual, example:class7  .
+example:individual72 rdf:type owl:NamedIndividual, example:class7  .
+example:individual73 rdf:type owl:NamedIndividual, example:class7  .
+example:individual74 rdf:type owl:NamedIndividual, example:class7  .
+example:individual75 rdf:type owl:NamedIndividual, example:class7  .
+example:individual76 rdf:type owl:NamedIndividual, example:class7  .
+example:individual77 rdf:type owl:NamedIndividual, example:class7  .
+example:individual78 rdf:type owl:NamedIndividual, example:class7  .
+example:individual79 rdf:type owl:NamedIndividual, example:class7  .
+
+example:class8 rdf:type owl:Class; rdfs:subClassOf example:topClass .
+example:individual80 rdf:type owl:NamedIndividual, example:class8  .
+example:individual81 rdf:type owl:NamedIndividual, example:class8  .
+example:individual82 rdf:type owl:NamedIndividual, example:class8  .
+example:individual83 rdf:type owl:NamedIndividual, example:class8  .
+example:individual84 rdf:type owl:NamedIndividual, example:class8  .
+example:individual85 rdf:type owl:NamedIndividual, example:class8  .
+example:individual86 rdf:type owl:NamedIndividual, example:class8  .
+example:individual87 rdf:type owl:NamedIndividual, example:class8  .
+example:individual88 rdf:type owl:NamedIndividual, example:class8  .
+example:individual89 rdf:type owl:NamedIndividual, example:class8  .
+
+example:class9 rdf:type owl:Class; rdfs:subClassOf example:topClass .
+example:individual90 rdf:type owl:NamedIndividual, example:class9  .
+example:individual91 rdf:type owl:NamedIndividual, example:class9  .
+example:individual92 rdf:type owl:NamedIndividual, example:class9  .
+example:individual93 rdf:type owl:NamedIndividual, example:class9  .
+example:individual94 rdf:type owl:NamedIndividual, example:class9  .
+example:individual95 rdf:type owl:NamedIndividual, example:class9  .
+example:individual96 rdf:type owl:NamedIndividual, example:class9  .
+example:individual97 rdf:type owl:NamedIndividual, example:class9  .
+example:individual98 rdf:type owl:NamedIndividual, example:class9  .
+example:individual99 rdf:type owl:NamedIndividual, example:class9  .
+
+example:property0 rdf:type owl:ObjectProperty ; 
+	 rdfs:domain example:class0 ;
+	 rdfs:range example:class2. 
+example:individual00 example:property0  example:individual20 .
+example:individual01 example:property0  example:individual21 .
+example:individual02 example:property0  example:individual22 .
+example:individual03 example:property0  example:individual23 .
+example:individual04 example:property0  example:individual24 .
+example:individual05 example:property0  example:individual25 .
+example:individual06 example:property0  example:individual26 .
+example:individual07 example:property0  example:individual27 .
+example:individual08 example:property0  example:individual28 .
+example:individual09 example:property0  example:individual29 .
+
+example:property1 rdf:type owl:ObjectProperty ; 
+	 rdfs:domain example:class1 ;
+	 rdfs:range example:class3. 
+example:individual10 example:property1  example:individual30 .
+example:individual11 example:property1  example:individual31 .
+example:individual12 example:property1  example:individual32 .
+example:individual13 example:property1  example:individual33 .
+example:individual14 example:property1  example:individual34 .
+example:individual15 example:property1  example:individual35 .
+example:individual16 example:property1  example:individual36 .
+example:individual17 example:property1  example:individual37 .
+example:individual18 example:property1  example:individual38 .
+example:individual19 example:property1  example:individual39 .
+
+example:property2 rdf:type owl:ObjectProperty ; 
+	 rdfs:domain example:class2 ;
+	 rdfs:range example:class4. 
+example:individual20 example:property2  example:individual40 .
+example:individual21 example:property2  example:individual41 .
+example:individual22 example:property2  example:individual42 .
+example:individual23 example:property2  example:individual43 .
+example:individual24 example:property2  example:individual44 .
+example:individual25 example:property2  example:individual45 .
+example:individual26 example:property2  example:individual46 .
+example:individual27 example:property2  example:individual47 .
+example:individual28 example:property2  example:individual48 .
+example:individual29 example:property2  example:individual49 .
+
+example:property3 rdf:type owl:ObjectProperty ; 
+	 rdfs:domain example:class3 ;
+	 rdfs:range example:class5. 
+example:individual30 example:property3  example:individual50 .
+example:individual31 example:property3  example:individual51 .
+example:individual32 example:property3  example:individual52 .
+example:individual33 example:property3  example:individual53 .
+example:individual34 example:property3  example:individual54 .
+example:individual35 example:property3  example:individual55 .
+example:individual36 example:property3  example:individual56 .
+example:individual37 example:property3  example:individual57 .
+example:individual38 example:property3  example:individual58 .
+example:individual39 example:property3  example:individual59 .
+
+example:property4 rdf:type owl:ObjectProperty ; 
+	 rdfs:domain example:class4 ;
+	 rdfs:range example:class6. 
+example:individual40 example:property4  example:individual60 .
+example:individual41 example:property4  example:individual61 .
+example:individual42 example:property4  example:individual62 .
+example:individual43 example:property4  example:individual63 .
+example:individual44 example:property4  example:individual64 .
+example:individual45 example:property4  example:individual65 .
+example:individual46 example:property4  example:individual66 .
+example:individual47 example:property4  example:individual67 .
+example:individual48 example:property4  example:individual68 .
+example:individual49 example:property4  example:individual69 .
+
+example:property5 rdf:type owl:ObjectProperty ; 
+	 rdfs:domain example:class5 ;
+	 rdfs:range example:class7. 
+example:individual50 example:property5  example:individual70 .
+example:individual51 example:property5  example:individual71 .
+example:individual52 example:property5  example:individual72 .
+example:individual53 example:property5  example:individual73 .
+example:individual54 example:property5  example:individual74 .
+example:individual55 example:property5  example:individual75 .
+example:individual56 example:property5  example:individual76 .
+example:individual57 example:property5  example:individual77 .
+example:individual58 example:property5  example:individual78 .
+example:individual59 example:property5  example:individual79 .
+
+example:property6 rdf:type owl:ObjectProperty ; 
+	 rdfs:domain example:class6 ;
+	 rdfs:range example:class8. 
+example:individual60 example:property6  example:individual80 .
+example:individual61 example:property6  example:individual81 .
+example:individual62 example:property6  example:individual82 .
+example:individual63 example:property6  example:individual83 .
+example:individual64 example:property6  example:individual84 .
+example:individual65 example:property6  example:individual85 .
+example:individual66 example:property6  example:individual86 .
+example:individual67 example:property6  example:individual87 .
+example:individual68 example:property6  example:individual88 .
+example:individual69 example:property6  example:individual89 .
+
+example:property7 rdf:type owl:ObjectProperty ; 
+	 rdfs:domain example:class7 ;
+	 rdfs:range example:class9. 
+example:individual70 example:property7  example:individual90 .
+example:individual71 example:property7  example:individual91 .
+example:individual72 example:property7  example:individual92 .
+example:individual73 example:property7  example:individual93 .
+example:individual74 example:property7  example:individual94 .
+example:individual75 example:property7  example:individual95 .
+example:individual76 example:property7  example:individual96 .
+example:individual77 example:property7  example:individual97 .
+example:individual78 example:property7  example:individual98 .
+example:individual79 example:property7  example:individual99 .
+
+example:property8 rdf:type owl:ObjectProperty ; 
+	 rdfs:domain example:class8 ;
+	 rdfs:range example:class0. 
+example:individual80 example:property8  example:individual00 .
+example:individual81 example:property8  example:individual01 .
+example:individual82 example:property8  example:individual02 .
+example:individual83 example:property8  example:individual03 .
+example:individual84 example:property8  example:individual04 .
+example:individual85 example:property8  example:individual05 .
+example:individual86 example:property8  example:individual06 .
+example:individual87 example:property8  example:individual07 .
+example:individual88 example:property8  example:individual08 .
+example:individual89 example:property8  example:individual09 .
+
+example:property9 rdf:type owl:ObjectProperty ; 
+	 rdfs:domain example:class9 ;
+	 rdfs:range example:class1. 
+example:individual90 example:property9  example:individual10 .
+example:individual91 example:property9  example:individual11 .
+example:individual92 example:property9  example:individual12 .
+example:individual93 example:property9  example:individual13 .
+example:individual94 example:property9  example:individual14 .
+example:individual95 example:property9  example:individual15 .
+example:individual96 example:property9  example:individual16 .
+example:individual97 example:property9  example:individual17 .
+example:individual98 example:property9  example:individual18 .
+example:individual99 example:property9  example:individual19 .

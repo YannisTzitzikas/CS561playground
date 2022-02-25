@@ -1,0 +1,17 @@
+<http://www.csd.uoc.gr/~tzitzik>
+        <http://www.csd.uoc.gr/teaches>
+                <https://elearn.uoc.gr/course/view.php?id=3112> ;
+        <http://www.csd.uoc.gr/visited>
+                <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Canada> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "Γιάννης Τζίτζικας@GR" , "Yannis Tzitzikas" .
+
+<http://www.csd.uoc.gr/~hy561>
+        <http://www.csd.uoc.gr/hasTeachings>
+                <https://elearn.uoc.gr/course/view.php?id=3112> .
+
+<http://dbpedia.org/resource/France>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Francia"@es ;
+        <http://www.csd.uoc.gr/ontology/populationEstimate>
+                66644000 .

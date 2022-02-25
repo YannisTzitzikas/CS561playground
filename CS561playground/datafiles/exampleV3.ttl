@@ -1,0 +1,278 @@
+@prefix : <http://www.ics.forth.gr/example#> .
+@prefix ex: <http://www.ics.forth.gr/example> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tmp: <http://www.semanticweb.org/maria/ontologies/2021/9/running_example#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix example: <http://www.ics.forth.gr/example#> .
+@base <http://www.ics.forth.gr/example> .
+
+<http://www.ics.forth.gr/example> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ics.forth.gr/example#founder
+example:founder rdf:type owl:ObjectProperty ;
+                rdfs:domain example:Company ;
+                rdfs:range example:Person .
+
+
+###  http://www.ics.forth.gr/example#hardDrive
+example:hardDrive rdf:type owl:ObjectProperty ;
+                  rdfs:domain example:Laptop ;
+                  rdfs:range example:HDType .
+
+
+###  http://www.ics.forth.gr/example#locatedAt
+example:locatedAt rdf:type owl:ObjectProperty ;
+                  rdfs:domain example:Country ;
+                  rdfs:range example:Continent .
+
+
+###  http://www.ics.forth.gr/example#manufacturer
+example:manufacturer rdf:type owl:ObjectProperty ;
+                     rdfs:domain example:Product ;
+                     rdfs:range example:Company .
+
+
+###  http://www.ics.forth.gr/example#origin
+example:origin rdf:type owl:ObjectProperty ;
+               rdfs:domain example:Company ;
+               rdfs:range example:Country .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.ics.forth.gr/example#GDP_per_capita
+example:GDP_per_capita rdf:type owl:DatatypeProperty ;
+                       rdfs:domain example:Country ;
+                       rdfs:range xsd:float .
+
+
+###  http://www.ics.forth.gr/example#USBPorts
+example:USBPorts rdf:type owl:DatatypeProperty ;
+                 rdfs:domain example:Laptop ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.ics.forth.gr/example#price
+example:price rdf:type owl:DatatypeProperty ;
+              rdfs:domain example:Product ;
+              rdfs:range xsd:float .
+
+
+###  http://www.ics.forth.gr/example#releaseDate
+example:releaseDate rdf:type owl:DatatypeProperty ;
+                    rdfs:domain example:Product ;
+                    rdfs:range xsd:dateTime .
+
+
+###  http://www.ics.forth.gr/example#size
+example:size rdf:type owl:DatatypeProperty ;
+             rdfs:domain example:HDType ;
+             rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ics.forth.gr/example#Company
+example:Company rdf:type owl:Class .
+
+
+###  http://www.ics.forth.gr/example#Continent
+example:Continent rdf:type owl:Class ;
+                  rdfs:subClassOf example:Location .
+
+
+###  http://www.ics.forth.gr/example#Country
+example:Country rdf:type owl:Class ;
+                rdfs:subClassOf example:Location .
+
+
+###  http://www.ics.forth.gr/example#HDType
+example:HDType rdf:type owl:Class ;
+               rdfs:subClassOf example:Product .
+
+
+###  http://www.ics.forth.gr/example#Laptop
+example:Laptop rdf:type owl:Class ;
+               rdfs:subClassOf example:Product .
+
+
+###  http://www.ics.forth.gr/example#Location
+example:Location rdf:type owl:Class .
+
+
+###  http://www.ics.forth.gr/example#NVMe
+example:NVMe rdf:type owl:Class ;
+             rdfs:subClassOf example:HDType .
+
+
+###  http://www.ics.forth.gr/example#Person
+example:Person rdf:type owl:Class .
+
+
+###  http://www.ics.forth.gr/example#Product
+example:Product rdf:type owl:Class .
+
+
+###  http://www.ics.forth.gr/example#SATA
+example:SATA rdf:type owl:Class ;
+             rdfs:subClassOf example:HDType .
+
+
+###  http://www.ics.forth.gr/example#SSD
+example:SSD rdf:type owl:Class ;
+            rdfs:subClassOf example:HDType .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.ics.forth.gr/example#AVDelectronics
+example:AVDelectronics rdf:type owl:NamedIndividual ,
+                                example:Company ;
+                       example:locatedAt example:Singapore ;
+                       rdfs:comment "Building on Singapore's position as a regional entrepot, AVD Electronics Marketing Pte Ltd has been in the business of importing and exporting electronics since it was established in 1996. Today, the company has expanded its services to also serve a diverse range of customers, from the everyday shopper to local enterprises, all from its retail front at Sim Lim Tower. The company also markets its own range of products under the ALDA® brand."@en .
+
+
+###  http://www.ics.forth.gr/example#America
+example:America rdf:type owl:NamedIndividual ,
+                         example:Continent .
+
+
+###  http://www.ics.forth.gr/example#Asia
+example:Asia rdf:type owl:NamedIndividual ,
+                      example:Continent .
+
+
+###  http://www.ics.forth.gr/example#China
+example:China rdf:type owl:NamedIndividual ,
+                       example:Country ;
+              example:locatedAt example:Asia ;
+              example:GDP_per_capita "8.612"^^xsd:float .
+
+
+###  http://www.ics.forth.gr/example#DELL
+example:DELL rdf:type owl:NamedIndividual ,
+                      example:Company ;
+             example:founder example:MichaelDell ;
+             example:origin example:USA ;
+             rdfs:comment "Dell is an American multinational computer technology company that develops, sells, repairs, and supports computers and related products and services, and is owned by its parent company of Dell Technologies. Founded in 1984 by Michael Dell, the company is one of the largest technology corporations in the world, employing more than 165,000 people in the U.S. and around the world."@en .
+
+
+###  http://www.ics.forth.gr/example#GroupOfEngineersFromCineseAcademyOfSciences
+example:GroupOfEngineersFromCineseAcademyOfSciences rdf:type owl:NamedIndividual ,
+                                                             example:Person ;
+                                                    rdfs:comment "Lenovo was founded in Beijing in 1 November 1984 as Legend by a team of engineers from the Chinese Academy of Sciences."@en .
+
+
+###  http://www.ics.forth.gr/example#LENOVO
+example:LENOVO rdf:type owl:NamedIndividual ,
+                        example:Company ;
+               example:founder example:GroupOfEngineersFromCineseAcademyOfSciences ,
+                               example:MichaelDell ;
+               example:origin example:China ;
+               example:releaseDate "20210505"^^xsd:dateTime ;
+               rdfs:comment "Lenovo Group Limited, often shortened to Lenovo ( /ləˈnoʊvoʊ/ lə-NOH-voh), is a Chinese multinational technology company specializing in designing, manufacturing, and marketing consumer electronics, personal computers, and related services. Products manufactured by the company includes desktop computers, laptops, tablet computers, smartphones, workstations, servers, supercomputers, electronic storage devices, IT management software, and smart televisions."@en .
+
+
+###  http://www.ics.forth.gr/example#Maxtor
+example:Maxtor rdf:type owl:NamedIndividual ,
+                        example:Company ;
+               example:founder example:MaxtorFounders ;
+               example:locatedAt example:USA ;
+               rdfs:comment "Maxtor was an American computer hard disk drive manufacturer. Founded in 1982, it was the third largest hard disk drive manufacturer in the world before being purchased by Seagate in 2006"@en .
+
+
+###  http://www.ics.forth.gr/example#MaxtorFounders
+example:MaxtorFounders rdf:type owl:NamedIndividual ,
+                                example:Person ;
+                       rdfs:comment "James McCoy, Jack Swartz, and Raymond Niedzwiecki"@en .
+
+
+###  http://www.ics.forth.gr/example#MichaelDell
+example:MichaelDell rdf:type owl:NamedIndividual ,
+                             example:Person ;
+                    rdfs:comment "He founded the DELL company"@en .
+
+
+###  http://www.ics.forth.gr/example#NVMe_1
+example:NVMe_1 rdf:type owl:NamedIndividual ,
+                        example:NVMe ;
+               example:manufacturer example:AVDelectronics ;
+               example:size 40 .
+
+
+###  http://www.ics.forth.gr/example#SSD_1
+example:SSD_1 rdf:type owl:NamedIndividual ,
+                       example:SSD ;
+              example:manufacturer example:AVDelectronics ;
+              example:size 60 .
+
+
+###  http://www.ics.forth.gr/example#SSD_2
+example:SSD_2 rdf:type owl:NamedIndividual ,
+                       example:SSD ;
+              example:manufacturer example:Maxtor ;
+              example:size 80 .
+
+
+###  http://www.ics.forth.gr/example#Singapore
+example:Singapore rdf:type owl:NamedIndividual ,
+                           example:Country ;
+                  example:locatedAt example:Asia .
+
+
+###  http://www.ics.forth.gr/example#USA
+example:USA rdf:type owl:NamedIndividual ,
+                     example:Country ;
+            example:locatedAt example:America ;
+            example:GDP_per_capita "59.939"^^xsd:float .
+
+
+###  http://www.ics.forth.gr/example#laptopDell-1
+example:laptopDell-1 rdf:type owl:NamedIndividual ,
+                              example:Laptop ;
+                     example:hardDrive example:SSD_1 ;
+                     example:manufacturer example:DELL ;
+                     example:USBPorts 2 ;
+                     example:price "2000.0"^^xsd:float ;
+                     example:releaseDate "2021-06-10T00:00:00"^^xsd:dateTime .
+
+
+###  http://www.ics.forth.gr/example#laptopDell-2
+example:laptopDell-2 rdf:type owl:NamedIndividual ,
+                              example:Laptop ;
+                     example:hardDrive example:SSD_2 ;
+                     example:manufacturer example:DELL ;
+                     example:USBPorts 2 ;
+                     example:price "3000.0"^^xsd:float ;
+                     example:releaseDate "2021-09-03T00:00:00"^^xsd:dateTime .
+
+
+###  http://www.ics.forth.gr/example#laptopLenovo-1
+example:laptopLenovo-1 rdf:type owl:NamedIndividual ,
+                                example:Laptop ;
+                       example:hardDrive example:NVMe_1 ;
+                       example:manufacturer example:LENOVO ;
+                       example:USBPorts 4 ;
+                       example:price "800.0"^^xsd:float ;
+                       example:releaseDate "2021-10-10T00:00:00"^^xsd:dateTime .
+
+
+###  urn:absolute:analytics#OWLNamedIndividual_d6ecc86b_498f_42e0_adce_2e2d948ded99
+<urn:absolute:analytics#OWLNamedIndividual_d6ecc86b_498f_42e0_adce_2e2d948ded99> rdf:type owl:NamedIndividual ;
+                                                                                 rdfs:label "testToDelete"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
