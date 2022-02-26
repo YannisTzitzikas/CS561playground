@@ -11,17 +11,14 @@ import org.apache.jena.rdf.model.ModelFactory;
 
 /**
  * @author Yannis Tzitzikas (yannistzitzik@gmail.com)
- * Reading an ontology from the folder Resources
+ * Reading an ontology (here CIDOC CRM) from the folder Resources
  */
 public class OntologyReader {
 
 	 void readFromPath(String filenameToRead) {
-		//String filenameToRead = "cidoc_crm_v6.2-2018April.rdfs.xml";
-		//String filenameToRead = "/ontologies/cidoc_crm_v6.2-2018April.rdfs.xml";
 		InputStream inputStream = getClass().getResourceAsStream(filenameToRead);
 		Model model = ModelFactory.createDefaultModel();
         try {
-        	//modelJ.read(new FileInputStream(filenameToRead), "http://ex.org/", "TURTLE");
              model.read(inputStream, "http://ex.org/", "RDF/XML");            
         } catch (Exception e) {
             System.out.println(e);
@@ -35,10 +32,13 @@ public class OntologyReader {
 	}
 	
 	public static void main(String[] lala) {
-		String opath = 	"/ontologies/cidoc_crm_v6.2-2018April.rdfs.xml";
+		String v2018 = "/ontologies/cidoc_crm_v6.2-2018April.rdfs.xml";
+		String v2021 = "/ontologies/CIDOC_CRM_v7.1.1.rdfs.xml";
 		
 		OntologyReader a = new OntologyReader();
-		a.readFromPath(opath);
+		//a.readFromPath(v2018);
+		a.readFromPath(v2021);
+		
 	}
    
 
