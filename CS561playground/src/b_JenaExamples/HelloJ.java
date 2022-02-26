@@ -1,15 +1,16 @@
 /**
  * Examples of using Jena.
  * Some material is based on the examples given at  https://wiki.uib.no/info216/index.php/Java_Examples#Hello_Jena
- * Various changes by Yannis Tzitzikas
+ * Various changes and additions by Yannis Tzitzikas
  * Status: ok (it runs)
  */
-package jenaVars;
+package b_JenaExamples;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
@@ -47,7 +48,7 @@ import com.github.jsonldjava.utils.JsonUtils;
 
 class HelloJena {
 
-	static Model model = ModelFactory.createDefaultModel(); // for making thi accessible to several  methods
+	static Model model = ModelFactory.createDefaultModel(); // for making this accessible to several  methods
     static String base = "http://www.csd.uoc.gr/";  // uri base of entities to be created
     static String iriDbpedia = "http://dbpedia.org/resource/"; // just the uri of dbpedia
     
@@ -57,7 +58,7 @@ class HelloJena {
      */
     
   
-    public static void createAFewTriples() {
+    public void createAFewTriples() {
     	Resource yannis = model.createResource(base + "~tzitzik");
 		Resource cs561 =  model.createResource(base + "~hy561");
 		Resource cs561_2022 =  model.createResource("https://elearn.uoc.gr/course/view.php?id=3112");
@@ -93,17 +94,20 @@ class HelloJena {
         System.out.println("\n--[System out in turtle]--");
         model.write(System.out, "TURTLE");
     
+      
         //writing to file
-        String filenameToWrite = "test.ttl";
+        String filenameToWrite = "datafilesOutput/testTriplesAboutYT.ttl";
+        String filenameToWrite2 = "datafilesOutput/testTriplesAboutYT.xml";
         System.out.println("\n--[Writting to file:" + filenameToWrite + "]--");
         try {
-            model.write(new FileOutputStream(filenameToWrite), "TURTLE");
+            model.write(new FileOutputStream(filenameToWrite), "TURTLE"); //ok
+            model.write(new FileOutputStream(filenameToWrite2), "RDF/XML"); //ok
+            
         } catch (Exception e) {
             System.out.println(e);
         }
         
         //reading from to file
-        //String filenameToWrite = "test.ttl";
         System.out.println("\n--[Reading from file:" + filenameToWrite);
         Model model2 = ModelFactory.createDefaultModel();
         try {
@@ -118,9 +122,9 @@ class HelloJena {
     }
     
 	/**
-	 * Read a remote ttl file, loads it as a model,  and prints its contents
+	 * Read a remote (Web-accessible) ttl file, loads it as a model,  and prints its contents
 	 */
-	private static void readTriplesFromTheWeb() {
+	 void readTriplesFromTheWeb() {
 		   String urlstr="https://people.uib.no/sinoa/test.ttl";
 		   
 		   System.out.println("\n--[Readring triples from the web]");
@@ -141,7 +145,7 @@ class HelloJena {
 	/**
 	 *  Dataset creation and querying with SPARQL
 	 */
-	static void testSPARQLqueries() {
+	void testSPARQLqueries() {
 		System.out.println("--[SPARQL Insert Data]--");
 		Dataset dataset = DatasetFactory.create();
 		
@@ -155,16 +159,7 @@ class HelloJena {
 				+ "    }"
 				+ "}", dataset);
 	
-		/*
-		UpdateAction.parseExecute(""
-				+ "PREFIX info216: <http://ex.org/teaching#>"
-				+ "INSERT DATA {"
-				+ "    info216:cade info216:teaches info216:ECO001 . "
-				+ "    GRAPH <http://ex.org/personal#Graph> {"
-				+ "        info216:cade info216:age '29' . "
-				+ "    }"
-				+ "}", dataset);
-		*/
+		
 
 		System.out.println("\n--[all contents of the dataset]");
 		RDFDataMgr.write(System.out, dataset, Lang.TRIG);
@@ -174,6 +169,7 @@ class HelloJena {
 		dataset.getDefaultModel().write(System.out, "TURTLE");
 		
 		
+		// Example of querying the dataset using SPARQL
 		System.out.println("\n--[Basic SELECT query]--");
 		ResultSet resultSet = QueryExecutionFactory
 		        .create(""
@@ -214,7 +210,7 @@ class HelloJena {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(">>>>" + jsonList);
+		System.out.println("JSON list of maps:\n" + jsonList);
 	    //  System.out.println("\n\n");
 	    
 	    // SELECT query with Query object
@@ -243,7 +239,7 @@ class HelloJena {
 	
 	
 		System.out.println("\n\n--[Basic DESCRIBE query]--");
-		Model franceModel = QueryExecutionFactory.create(""
+		Model modelByDescribe = QueryExecutionFactory.create(""
 	            //+ "DESCRIBE <" + iriDbpedia + "France>"
 	            + "DESCRIBE <http://www.csd.uoc.gr/~tzitzik>" 
 	            + "", dataset).execDescribe();
@@ -253,15 +249,18 @@ class HelloJena {
 		//System.out.println(">>>>>>>>>>>>"+dataset.toString());
 		//		dataset.write(System.out,"TURTLE");
 		System.out.println("The result of the Describe query:");
-		franceModel.write(System.out, "TURTLE");
+		modelByDescribe.write(System.out, "TURTLE");
 	}
 
     public static void main(String[] args) {
+    	
+    	System.out.println("Examples with Jena for managing RDF");	
+   	 
+    	HelloJena hj = new HelloJena();
        
-    	 System.out.println("Examples with Jena for managing RDF");	
-    	 //createAFewTriples(); // ok
-    	 //readTriplesFromTheWeb(); // ok
-    	 testSPARQLqueries();     
+    	 hj.createAFewTriples(); // ok
+    	 hj.readTriplesFromTheWeb(); // ok
+    	 hj.testSPARQLqueries();     // ok
 		}
 
 		

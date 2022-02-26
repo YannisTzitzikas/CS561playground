@@ -1,0 +1,23 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.csd.uoc.gr/"
+    xmlns:j.1="http://www.csd.uoc.gr/ontology/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.2="http://xmlns.com/foaf/0.1/">
+  <rdf:Description rdf:about="http://www.csd.uoc.gr/~hy561">
+    <j.0:hasTeachings rdf:resource="https://elearn.uoc.gr/course/view.php?id=3112"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.csd.uoc.gr/~tzitzik">
+    <j.0:visited>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/France">
+        <j.1:populationEstimate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >66644000</j.1:populationEstimate>
+        <rdfs:label xml:lang="es">Francia</rdfs:label>
+      </rdf:Description>
+    </j.0:visited>
+    <j.0:visited rdf:resource="http://dbpedia.org/resource/Canada"/>
+    <j.2:name>Γιάννης Τζίτζικας@GR</j.2:name>
+    <j.2:name>Yannis Tzitzikas</j.2:name>
+    <j.0:teaches rdf:resource="https://elearn.uoc.gr/course/view.php?id=3112"/>
+  </rdf:Description>
+</rdf:RDF>

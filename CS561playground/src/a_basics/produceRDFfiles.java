@@ -1,20 +1,20 @@
 /**
  * 
  */
-package appsSmall;
+package a_basics;
 
 import java.io.FileWriter;
 
 /**
  * Produces a simple file in RDF (ttl format) that is loadable by Protege
  * (no dependency to any other library or code).
- * scenario1: simple
- * scenario2: synthetic dataset
+ * scenario1: producing a small dataset (literally)
+ * scenario2: producing a synthetic dataset (algorithmically)
  * @author Yannis Tzitzikas (yannistzitzik@gmail.com)
  *
  */
 
-public class produceRDFsimple {
+public class produceRDFfiles {
 	
 	private static String headerStr =
 			"@prefix : <http://www.ics.forth.gr/example#> .\r\n" + 
@@ -31,13 +31,16 @@ public class produceRDFsimple {
 			"<http://www.ics.forth.gr/example> rdf:type owl:Ontology .\n\n";
 	
 	
-	public static void scenario1() {
+	/**
+	 * Produces a small  RDF file in ttl format (it has a small schema and a few instances)
+	 * @param filenameToWrite
+	 */
+	
+	public static void scenario1(String filenameToWrite) {
 		
 		try {
-			FileWriter fr = new FileWriter("datafiles/todelete2022-scenario1.ttl",false); // overwrite file if it exists
-			
+			FileWriter fr = new FileWriter(filenameToWrite,false); // overwrite file if it exists
 			fr.write(headerStr);
-			
 			String triplesStr ="example:Company rdf:type owl:Class .\r\n" + 
 					"\r\n" + 
 					"example:Location rdf:type owl:Class .\n" + 
@@ -56,10 +59,9 @@ public class produceRDFsimple {
 					"               example:price \"59.939\"^^xsd:float ;\r\n" + 
 					"               rdfs:comment \"Maxtor was an American computer hard disk drive manufacturer. Founded in 1982, it was the third largest hard disk drive manufacturer in the world before being purchased by Seagate in 2006\"@en .\r\n" + 
 					"";
-			
 			fr.write(triplesStr);
 			fr.close();
-			System.out.println("Success.");
+			System.out.println("Success (scenario1).");
 
 		  } catch (Exception e) {
 			  System.out.println(e);
@@ -68,10 +70,16 @@ public class produceRDFsimple {
 		 
 		  }
 	
-public static void scenario2() {
+	/**
+	 * Produces an RDF file algorithmically.
+	 * We can control the size. We can load the output to protege to browse it
+	 * @param filenameToWrite
+	 */
+	
+	public static void scenario2(String filenameToWrite) {
 		
 		try {
-			FileWriter fr = new FileWriter("datafiles/todelete2022-scenario2.ttl",false); // overwrite file if it exists
+			FileWriter fr = new FileWriter(filenameToWrite,false); // overwrite file if it exists
 			
 			fr.write(headerStr);
 			
@@ -101,7 +109,7 @@ public static void scenario2() {
 			}
 					
 			fr.close();
-			System.out.println("Success.");
+			System.out.println("Success (scenario2).");
 
 		  } catch (Exception e) {
 			  System.out.println(e);
@@ -112,8 +120,8 @@ public static void scenario2() {
 
 	
 	public static void main(String[] args) {
-		scenario1(); // simple
-		scenario2(); // programmatic
+		scenario1("datafilesOutput/output-scenario1.ttl"); // simple
+		scenario2("datafilesOutput/output-scenario2.ttl");    // synthetic
 
 	}
 }
