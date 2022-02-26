@@ -15,7 +15,8 @@ import java.net.URI;
 
 /**
  * @author Yannis Tzitzikas (yannistzitzik@gmail.com)
- * Reading an ontology (here CIDOC CRM) from the folder Resources
+ * Reading an ontology (here CIDOC CRM) from the folder Resources.
+ * Calls an external visualiation service
  */
 public class OntologyReader {
 
