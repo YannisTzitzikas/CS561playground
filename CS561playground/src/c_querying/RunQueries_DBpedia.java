@@ -25,7 +25,7 @@ import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
 
 /**
- * Examples of sending SPARQL queries to DBpedia
+ * Examples of sending SPARQL queries to DBpedia (the code also uses Jena)
  * @author Yannis Tzitzikas (yannistzitzik@gmail.com)
  *
  */
@@ -35,13 +35,13 @@ public class RunQueries_DBpedia {
 	public static void queryDBpedia() {
 		
 		//Q1
-		// Through a local (empty) model and a SPARQL query that uses SERVICE
+		// Through a local (empty) Jena model and a SPARQL query that uses SERVICE
 		System.out.println("q1: Getting 10 persons from dbpedia");
 	    String q1 = "SELECT DISTINCT ?person WHERE { SERVICE <http://dbpedia.org/sparql> {  	?person a <http://xmlns.com/foaf/0.1/Person> . } } LIMIT 10";
 	    System.out.println("q1: " + q1 );
 	    System.out.println("q1 results:");
-	    Dataset dataset = DatasetFactory.create();
-	    ResultSet q1Res = QueryExecutionFactory.create(q1, dataset).execSelect();
+	    Dataset dataset = DatasetFactory.create();  // an empty dataset
+	    ResultSet q1Res = QueryExecutionFactory.create(q1, dataset).execSelect(); // for executing this SELECT query
    	   	while (q1Res.hasNext()) {
 		    QuerySolution qs = q1Res.nextSolution();
 		    System.out.println(qs.toString());
@@ -74,7 +74,7 @@ public class RunQueries_DBpedia {
 		//Q3
    		// Directly sending the SPARQL query
         System.out.println("\n\n");
-   	    System.out.println("q3: Getting ");
+   	    System.out.println("q3: Getting  a resource about a medication and its english abstract ");
 	    String q3 = "prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n"
                 + "PREFIX dbo:     <http://dbpedia.org/ontology/>"
                 + "\n"
